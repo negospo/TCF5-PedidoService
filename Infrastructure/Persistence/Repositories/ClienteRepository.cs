@@ -7,7 +7,7 @@ namespace Infrastructure.Persistence.Repositories
     {
         public bool Delete(int id)
         {
-            string query = "update cliente set excluido = true, nome = null, cpf = null where id = @id";
+            string query = "update cliente set excluido = true, nome = 'xxx', cpf = null where id = @id";
             int affected = Database.Connection().Execute(query, new { id = id });
             return (affected > 0);
         }
